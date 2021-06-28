@@ -395,28 +395,23 @@ void delete_at_pos(Node** lt,Node** rt,int pos)
 
 void remove_duplicates(Node** lt,Node** rt)
 {
-    Node *q,*t;
-    q=*lt;
-    t=(*lt)->next;
-    while (t!=NULL)
+    Node *q=*lt,*p;
+    while (q->next!=NULL)
     {
-        if(q->data!=t->data)
+        if(q->data==q->next->data)
         {
-            q=t;
-            t=t->next;
-            cout<<"0";
+            p=q->next->next;
+            free(q->next);
+            q->next=p;
         }
-
         else
         {
-            cout<<"1";
-            q->next=t->next;
-            free(q);
-            t=q->next;
+            q=q->next;
         }
     }
-    cout<<"100";
+    
 }
+
 
 void create(Node** lt,Node** rt,int *A,int n)
 {
