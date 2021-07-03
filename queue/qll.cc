@@ -78,19 +78,21 @@ void enqueue(nodetype** f,nodetype** r)
 int dequeue(nodetype** f,nodetype** r)
 {
     int p=(*f)->info;
+    nodetype* temp=*f;
     if(*f==*r)
     {
         *f=*r=NULL;
     }
     else
         *f=(*f)->next;
+    free(temp);
     return p;
 }
 void display(nodetype* f,nodetype* r)
 {
     while(f!=NULL)
     {
-        cout<<f->info<<" 1";
+        cout<<f->info<<" ";
         f=f->next;
     }
 
