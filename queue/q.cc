@@ -21,7 +21,6 @@ int main()
                    else
                    {
                         enqueue(q,&f,&r);
-                        cout<<f<<" "<<r;
                    }
                    break;
             case 2:if(f==-1&&r==-1)
@@ -38,7 +37,7 @@ int main()
                    else
                         display(q,f,r);
                    break;
-            default:printf("\nenter valid choice");
+            default:cout<<"\nenter valid choice";
         }
         cout<<"\nif you want to continue press 1:";
         cin>>o;
