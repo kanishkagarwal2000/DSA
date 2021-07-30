@@ -1,3 +1,4 @@
+//Its circular queue
 #include<bits/stdc++.h>
 using namespace std;
 #define max 5
@@ -48,7 +49,7 @@ int main()
 }
 
 
-void enqueue(int a[],int *f,int *r)
+void enqueue(int a[],int *f,int *r)//circular queue
 {
     int v;
     cout<<"Enter value:";
